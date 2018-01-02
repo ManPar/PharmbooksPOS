@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:id="@+id/medicine_list_layout"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:clickable="true"
+    android:background="#ddd"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/MName"
+        android:textColor="@color/MName"
+        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:text="sample"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="16dp"
+            android:layout_height="wrap_content"
+            android:text="Dosage : "/>
+    <TextView
+        android:id="@+id/MQuantity"
+        android:layout_below="@id/MQuantity"
+        android:text="sample"
+        android:textSize="16dp"
+        android:layout_width="match_parent"
+        android:layout_weight="2"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

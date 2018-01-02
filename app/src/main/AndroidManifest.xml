@@ -2,6 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.pharmbooks.pharmbookspos">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,13 +18,62 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity">
+           </activity>
+
+        <activity android:name=".TransactionalMessage"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pharmbooks.pharmbookspos.MainActivity" /></activity>
+        <activity android:name=".RefillListActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pharmbooks.pharmbookspos.MainActivity" /></activity>
+        <activity android:name=".PrescriptionListActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pharmbooks.pharmbookspos.MainActivity" /></activity>
+        <activity android:name=".MedicineData"
+            android:parentActivityName=".CustomerDetail">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pharmbooks.pharmbookspos.CustomerDetail" /></activity>
+        <activity android:name=".PrescriptionRefillActivity"
+            android:parentActivityName=".RefillListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pharmbooks.pharmbookspos.RefillListActivity" /></activity>
+        <activity android:name=".CustomerDetail"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pharmbooks.pharmbookspos.MainActivity" /></activity>
+        <activity android:name=".CustomerPrescription"
+            android:parentActivityName=".PrescriptionListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pharmbooks.pharmbookspos.PrescriptionListActivity"/></activity>
+        <activity android:name=".CreateInvoice"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pharmbooks.pharmbookspos.MainActivity"/></activity>
+        <activity android:name=".InvoiceDetails"
+            android:parentActivityName=".CreateInvoice">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pharmbooks.pharmbookspos.CreateInvoice"/></activity>
     </application>
+
 
 </manifest>
